@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+</head>
+
+<body>
+    <!-- # 자기자신에게 돌아오는 것 -->
+    <form name="form1" action="#" method="get">
+        <fieldset>
+            <legend>text input</legend>
+            <input type="text" name="text1" placeholder="한줄 입력" maxlength="4"><br>
+            <input type="text" name="text1" value="기본값" readonly><br>
+            <input type="password" name="pw" placeholder="암호입력"><br>
+            <textarea name="message" rows="5" cols="35" placeholder="여러줄 입력"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>select</legend>
+            <label>radio button--</label><br>
+            <!-- name이 같아야 처리를 제대로 해준다 라디오는 하나만 선택하기 때문에 -->
+            <input type="radio" name="lecture" value="html" checked>HTML<br>
+            <!-- value 값을 체크하는 것이다 체크하면 넘어가는 값은 밸류값이다 뒤에는 그냥 표시용 HTML -->
+            <input type="radio" name="lecture" value="css">CSS<br>
+            <input type="radio" name="lecture" value="java">Java<br>
+            <input type="radio" name="lecture" value="script">Java Script<br>
+
+
+            <lable>check box--</lable><br>
+            <input type="checkbox" name="lecture1" value="html" checked>HTML<br> <!-- checked는 선택돼서 나온다 -->
+            <input type="checkbox" name="lecture1" value="css" checked>CSS<br>
+            <input type="checkbox" name="lecture1" value="java" checked>JAVA<br>
+            <input type="checkbox" name="lecture1" value="script" checked>Java Script<br>
+
+            <label>drop down list</label><br>
+            <select name="fruit">
+                <option value="apple">사과</option>
+                <option value="orange">오렌지</option>
+                <option value="strawberry">딸기</option>
+                <option value="peach">복숭아</option>
+            </select>
+            <br>
+            <input list="lectures" name="lectures">
+            <datalist id="lectures">
+                <option value="HTML">태그입니다.</option>
+                <option value="CSS">꾸며요</option>
+                <option value="JAVA">자바</option>
+                <option value="JavaScript">JavaScript 입니다</option>
+            </datalist>
+        </fieldset>
+
+        <button type="submit">전송</button>
+        <button type="button" onclick='alert("클릭하셨습니다.")'>버튼</button>
+
+        <input type="submit" value="전송">
+        <input type="button" onclick='alert("클릭하셨습니다.")' value="클릭">
+        <input type="result">        
+
+    </form>
+    <form name="fileform" action="#" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <!-- 파일을 입력하게 되면 form안에 옵션을 넣어야 한다 -->
+            <legend>file</legend>
+            <input type="file" name="upload" accept=".txt,image/*" multiple> <!-- image/* audio/* video* --><!-- multiple 파일 여러개 선택 가능 -->
+        </fieldset>
+        <button type="submit">전송</button>
+    </form>
+
+    <form name="formEtc" action="#" method="get">
+        <input type="color" id="fav" name="fav" class="fav" placeholder="컬러픽커"><br>
+        <input type="date" name="dday" min="1900-01-01" max="2023-01-01" placeholder="날짜"><br>
+        <input type="month" name="dmonth" placeholder="날짜 월"><br>
+        <input type="time" name="dtime" placeholder="시간"><br>
+        <input type="week" name="dweek" placeholder="주"><br>
+        <input type="email" name="email" placeholder="이메일 형식체크"><br>
+        <input type="search" name="search" placeholder="검색" disabled><br>
+        <input type="tel" name="telnum" placeholder="***-****-****"
+            pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br> <!-- 정규식 -->
+        <input type="url" name="page" placeholder="url 주소"><br>
+        <input type="number" name="num" placeholder="1-20사이 숫자 입력"
+            min="1" max="20" step="2" style="width: 100px;"><br>
+        <input type="image" src="image/bear-g52b0262fa_640.jpg" alt="대체" width="48" height="48"><br>
+        <input type="hidden" name="id" value="1234" placeholder="숨겨진 값"><br>
+        <button type="submit">제출</button>
+    </form>
+</body>
+
+</html>

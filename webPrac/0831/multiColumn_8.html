@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Multi Column</title>
+    <style>
+        #origin{
+            margin: 30px 0;
+            column-count: 3;
+            column-rule-style: solid;
+            column-rule-width: 5px;
+            column-rule-color: aquamarine;
+        }
+        #gap{
+            column-gap: 70px;
+            column-width: 100px;
+            column-rule: 3px solid red;
+        }
+
+        #merge{column-span: all;}
+    </style>
+</head>
+
+<body>
+    <h1>column 속성을 이용한 컬럼 생성</h1>
+    <div id="origin">
+        <h4>컬럼 생성</h4>
+        <p>
+            HTML 요소의 가장 바깥 부분을 둘러싸고 있는 아웃라인 부분의 스타일을 설정
+            outline 속성은 border 속성과는 달리 HTML 요소의 전체 크기에는 미포함
+            HTML 요소의 높이나 너비는 outline의 두께에 전혀 영향이 없음
+            style은 border와 같은 속성 사용
+            
+        </p>
+    </div>  
+    
+    <div id="gap">
+        <h4 id="merge">span으로 컬럼 병합</h4>
+        <p>
+            HTML 요소의 가장 바깥 부분을 둘러싸고 있는 아웃라인 부분의 스타일을 설정
+            outline 속성은 border 속성과는 달리 HTML 요소의 전체 크기에는 미포함
+            HTML 요소의 높이나 너비는 outline의 두께에 전혀 영향이 없음
+            style은 border와 같은 속성 사용
+            
+        </p>
+    </div>
+
+</body>
+</html>

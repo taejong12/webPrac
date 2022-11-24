@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow</title>
+    <style>
+        div{border: 1px solid green; width: 200px; height: 200px;
+        display: inline-block;}
+
+        /* nowrap 꺽어내리지 않는다 */
+        div.container1{
+            /* overflow: hidden; */
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        div.container2{
+            /* overflow: scroll; */
+            /* overflow: auto; */
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <p>
+            CSS overflow속성은 요소내의 컨텐츠가 많을 때 보여지는 속성이라 내용이 많아야 합니다.
+            어느새 흐려진 수많은 날들이
+            문득 생각이 나죠
+            그때 즐겨 듣던 노랠
+            하나씩 꺼내 보죠
+            그래 그랬었지 우리그리워하다가 운 노래
+            내 맘은 여전해 아직 너야
+            괜찮다고 위로된 노래
+            I believe in you, I believe in you
+            아직 너의 소리가 들려
+        </p>
+    </div>
+
+    <div class="container2">
+        <p>
+            CSS overflow속성은 요소내의 컨텐츠가 많을 때 보여지는 속성이라 내용이 많아야 합니다.
+            어느새 흐려진 수많은 날들이
+            문득 생각이 나죠
+            그때 즐겨 듣던 노랠
+            하나씩 꺼내 보죠
+            그래 그랬었지 우리그리워하다가 운 노래
+            내 맘은 여전해 아직 너야
+            괜찮다고 위로된 노래
+            I believe in you, I believe in you
+            아직 너의 소리가 들려
+        </p>
+    </div>
+
+</body>
+
+</html>

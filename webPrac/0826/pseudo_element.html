@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소</title>
+    <style>
+        /* p요소의 첫글자 선택 */
+        /* em 브라우저가 정해놓은 기본사이즈의 몇배를 할 것인지 정한다 */
+        p::first-letter{font-size: 3em;}
+       
+        /* p요소의 첫줄 선택 */
+        /* 눈에 보이는 첫줄 */
+        p::first-line{color: red;}
+
+        /* h1요소의 앞공간에 content속성 값을 입력 */
+        h1::before{
+            content:"HTML!!";
+            color:blue;
+        }
+       
+        /* h1요소의 뒷공간에 content속성 값을 입력 */
+        h1::after{
+            content:"CSS!!"url("../0824/image/bear-g52b0262fa_640.jpg");
+            color: white;
+            background-color: green;
+        }
+
+        /* 마우스 드래그 */
+        ::selection{
+            color: purple;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>의사 요소</h1>
+    <p>Look at you (yeah) 넌 못 감당해 날 (uh)
+        You took (umm) off hook (yah)
+        기분은 coke like brr
+        Look at my toe, 나의 ex 이름 tattoo
+        I got to drink up now, 네가 싫다 해도 좋아 (ah!)
+    </p>
+    <div></div>
+</body>
+
+</html>
